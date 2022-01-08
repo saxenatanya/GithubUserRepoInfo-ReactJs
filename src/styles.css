@@ -157,6 +157,12 @@ footer {
   height: 100px;
   background: blue;
 }
+.deatils {
+  display: flex;
+}
+.right-section {
+  color: black;
+}
 
 .repo-detail-image {
   width: 200px;

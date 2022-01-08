@@ -1,5 +1,4 @@
 import RepoDetails from "./RepoDetails";
-import { Link, useSearchParams } from "react-router-dom";
 import { useState } from "react";
 const repoDetail = [
   {
@@ -151,22 +150,15 @@ const repoDetail = [
 
 const RepoList = (props) => {
   const [hidelist, setHideList] = useState(false);
+  const [repoDetailData, setRepoDetailsData] = useState([]);
 
-  function renderRepoDetails(e, element) {
-    // e.preventDefault();
-    console.log("renderRepoDetails click");
-    console.log({ element });
-    return (
-      <div className="deatils">
-        <div className="left-section">
-          <div>
-            <img src={element.owner?.avatar_url} alt="" />
-          </div>
-        </div>
-        <div className="right-section"></div>
-      </div>
-    );
-  }
+  // function renderRepoDetails(e, element) {
+  //   fetch(`https://api.github.com/users/${username}/${repos}`)
+  //   .then((response) => response.json())
+  //   .then((data) => {
+  //     setRepoDetailsData(data);
+  //   });
+  // }
 
   return hidelist ? (
     <RepoDetails repoDetail={repoDetail} />
@@ -178,10 +170,6 @@ const RepoList = (props) => {
             <img src={element.owner?.avatar_url} alt="" />
           </div>
           <div className="repo-content">
-            {/* <Link to="/repo" className="btn btn-primary">
-              {" "}
-              {element?.name}
-            </Link> */}
             <div className="reponame" onClick={() => setHideList(true)}>
               {" "}
               {element?.name}

@@ -20,6 +20,8 @@ const RepoDetails = (props) => {
         </div>
         <div className="right-section">
           <div>{props.repoDetail[0].name}</div>
+          <div>{`${props.repoDetail[0].forks} forks`}</div>
+          <div>{props.repoDetail[0].description}</div>
         </div>
       </div>
     </>

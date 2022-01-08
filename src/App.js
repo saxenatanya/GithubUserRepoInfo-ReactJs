@@ -4102,7 +4102,7 @@ export default function App() {
                 name="filter"
                 id="filter"
                 value={userName}
-                placeholder="Filter by name"
+                placeholder="Filter by repo"
                 onChange={(e) => setUserName(e.target.value)}
               />
               <button className="button-container" onClick={handleSubmit}>
