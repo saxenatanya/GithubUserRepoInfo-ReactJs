@@ -1,5 +1,6 @@
 import RepoDetails from "./RepoDetails";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
+import { useState } from "react";
 const repoDetail = [
   {
     id: 367340762,
@@ -149,6 +150,8 @@ const repoDetail = [
 ];
 
 const RepoList = (props) => {
+  const [hidelist, setHideList] = useState(false);
+
   function renderRepoDetails(e, element) {
     // e.preventDefault();
     console.log("renderRepoDetails click");
@@ -165,28 +168,32 @@ const RepoList = (props) => {
     );
   }
 
-  return props.repoData1.map((element) => (
-    <div className="title" key={element.id}>
-      <div className="top">
-        <div>
-          <img src={element.owner?.avatar_url} alt="" />
-        </div>
-        <div className="repo-content">
-          {/* <Link to="/repo" className="btn btn-primary">
-            {" "}
-            {element?.name}
-          </Link> */}
-          <div className="reponame" onClick={() => <RepoDetails />}>
-            {" "}
-            {element?.name}
+  return hidelist ? (
+    <RepoDetails repoDetail={repoDetail} />
+  ) : (
+    props.repoData1.map((element) => (
+      <div className="title" key={element.id}>
+        <div className="top">
+          <div>
+            <img src={element.owner?.avatar_url} alt="" />
           </div>
-          <div className="description">
-            <span>{element?.description}</span>
+          <div className="repo-content">
+            {/* <Link to="/repo" className="btn btn-primary">
+              {" "}
+              {element?.name}
+            </Link> */}
+            <div className="reponame" onClick={() => setHideList(true)}>
+              {" "}
+              {element?.name}
+            </div>
+            <div className="description">
+              <span>{element?.description}</span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  ));
+    ))
+  );
 };
 
 export default RepoList;

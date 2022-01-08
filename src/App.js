@@ -4079,12 +4079,6 @@ export default function App() {
 
   // }, []);
 
-  // const setData = ({ name, description, image }) => {
-  //   setRepoName(repoData[0]?.name);
-  //   setDescription(repoData[0]?.description);
-  //   setImage(repoData[0]?.owner.avatar_url);
-  // };
-
   function handleSubmit(e) {
     e.preventDefault();
     searchRepos();
@@ -4121,6 +4115,7 @@ export default function App() {
         <div className="list">
           <div className="repo-container">
             <RepoList repoData1={repoData1} />
+            {/* <RepoList repoData={repoData} /> */}
           </div>
         </div>
       </section>
