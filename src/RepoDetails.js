@@ -1,9 +1,12 @@
+import { useContext } from "react";
+import { RepoContext } from "./contexts/RepoContext";
 import "./styles.css";
 
 const RepoDetails = (props) => {
+  const ownerName = useContext(RepoContext);
+  console.log({ ownerName });
   return (
     <>
-      {console.log({ props })}
       <div className="deatils">
         <div className="left-section">
           <div>
