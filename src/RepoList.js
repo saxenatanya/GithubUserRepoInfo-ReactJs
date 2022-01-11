@@ -1,22 +1,11 @@
 import RepoDetails from "./RepoDetails";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { RepoContext } from "./contexts/RepoContext";
 import { Link } from "react-router-dom";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const RepoList = (props) => {
-  const [repoDetailsData, setRepoDetailsData] = useState([]);
-
   const valueName = useContext(RepoContext);
   console.log({ valueName });
-
-  // function renderRepoDetails(e, element) {
-  //   fetch(`https://api.github.com/users/${props.username}/${props.name}`)
-  //   .then((response) => response.json())
-  //   .then((data) => {
-  //     setRepoDetailsData(data);
-  //   });
-  // }
 
   return valueName.map((element) => (
     <div className="title" key={element.id}>
