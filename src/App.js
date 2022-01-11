@@ -59,7 +59,7 @@ export default function App() {
                     path="/"
                     element={<RepoList repoData={repoData} />}
                   ></Route>
-                  {/* <Route path="/repo" element={<RepoDetails />}></Route> */}
+                  <Route path="/repo" element={<RepoDetails />}></Route>
                 </Routes>
               </Router>
             </div>

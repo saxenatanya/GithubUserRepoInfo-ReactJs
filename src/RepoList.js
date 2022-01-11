@@ -28,8 +28,6 @@ const RepoList = (props) => {
           <Link to="/repo" className="reponame" element={<RepoDetails />}>
             {element?.name}
           </Link>
-          {/* <Route path="/:{element.name}" element={<RepoDetails />}></Route> */}
-
           <div className="description">
             <span>{element?.description}</span>
           </div>
