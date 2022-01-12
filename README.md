@@ -9,3 +9,8 @@ notes for self
 - give out all repo details in it
 - then on click of each repo title
   -make a new component and show the deatils for image 2
+
+TO-DO
+
+- back button implementation is left
+- dynamic link loading

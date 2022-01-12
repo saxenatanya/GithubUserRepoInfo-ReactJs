@@ -14,7 +14,7 @@ const RepoList = (props) => {
           <img src={element.owner?.avatar_url} alt="" />
         </div>
         <div className="repo-content">
-          <Link to="/repo" className="reponame" element={<RepoDetails />}>
+          <Link to="/repo" className="reponame">
             {element?.name}
           </Link>
           <div className="description">

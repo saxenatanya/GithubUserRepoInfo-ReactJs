@@ -13,7 +13,6 @@ const RepoDetails = (props) => {
             className="repo-detail-image"
             src={val.owner?.avatar_url}
             alt=""
-            srcset=""
           />
           <span className="repo-detail-visibilty">{val.visibility}</span>
         </div>
