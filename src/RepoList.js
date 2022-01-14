@@ -1,9 +1,8 @@
-import RepoDetails from "./RepoDetails";
 import { useContext } from "react";
 import { RepoContext } from "./contexts/RepoContext";
 import { Link } from "react-router-dom";
 
-const RepoList = (props) => {
+const RepoList = () => {
   const valueName = useContext(RepoContext);
   console.log({ valueName });
 
