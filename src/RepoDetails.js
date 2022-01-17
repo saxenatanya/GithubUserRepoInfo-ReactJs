@@ -4,7 +4,7 @@ import "./styles.css";
 
 const RepoDetails = (props) => {
   const ownerName = useContext(RepoContext);
-  // console.log({ ownerName });
+  console.log({ ownerName });
   return ownerName.map((val, ind) => (
     <div className="deatils" key={val.id}>
       <div className="left-section">

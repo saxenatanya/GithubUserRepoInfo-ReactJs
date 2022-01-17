@@ -10,3 +10,7 @@ ReactDOM.render(
   </StrictMode>,
   rootElement
 );
+
+// use - useParams
+// use destructuring of context and fetch data
+// create useFetch hook seperatly
